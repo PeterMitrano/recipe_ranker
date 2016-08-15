@@ -3,7 +3,7 @@ import unittest
 from recipe_ranker import ranker
 
 class ResultsTest(unittest.TestCase):
-    recipes = [
+    TEST_RECIPES = [
         {"id": 0, "name": "chicken teriyaki with snap peas"},
         {"id": 1, "name": "simple buttermilk pancakes"},
         {"id": 2, "name": "chocolate chip pancakes"},
@@ -15,7 +15,7 @@ class ResultsTest(unittest.TestCase):
     ]
 
     def test_no_match(self):
-        recipes = ranker.search("pancakes", recipes)
+        recipes = ranker.search("pancakes", self.TEST_RECIPES)
         self.assertEqual(len(recipes), 2)
 
 
