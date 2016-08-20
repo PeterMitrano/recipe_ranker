@@ -4,6 +4,7 @@ import unittest
 from recipe_ranker.tests import test_util
 from recipe_ranker import ranker
 
+@test_util.wip
 class ResultsTest(unittest.TestCase):
     @classmethod
     def setUpClass(cls):
